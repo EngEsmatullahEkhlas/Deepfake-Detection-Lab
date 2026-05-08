@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>پلتفرم اختصاصی ما</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(45deg, #0f0c29, #302b63, #24243e); /* گرادینت فضایی */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        /* پنل اصلی شیشه‌ای */
+        .glass-panel {
+            width: 90%;
+            max-width: 1200px;
+            height: 80vh;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px); /* افکت مات کردن پشت */
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: grid;
+            grid-template-columns: 250px 1fr 300px;
+            overflow: hidden;
+            box-shadow: 0 25px 45px rgba(0,0,0,0.5);
+        }
+
+        /* بخش ویدیو (مرکز) */
+        .video-main {
+            background: rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border: 2px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* دکمه‌های کنترل */
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .btn-end { background: #ff4757; color: white; }
+        .btn-end:hover { background: #ff6b81; transform: scale(1.1); }
+        
+        .btn-action { background: rgba(255, 255, 255, 0.2); color: white; }
+        .btn-action:hover { background: rgba(255, 255, 255, 0.4); }
+
+        /* نوار کناری */
+        .sidebar {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h3 { border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="glass-panel">
+        <div class="sidebar">
+            <h3>یادداشت‌های ما</h3>
+            <p style="font-size: 0.9em; opacity: 0.7;">امروز فراموش نکن که...</p>
+        </div>
+
+        <div class="video-main">
+            <div style="text-align: center;">
+                <div style="width: 100px; height: 100px; background: rgba(255,255,255,0.1); border-radius: 50%; margin: 0 auto 20px;"></div>
+                <p>در انتظار برقراری تماس...</p>
+            </div>
+            
+            <div class="controls">
+                <button class="btn btn-action">🎤</button>
+                <button class="btn btn-end">📞</button>
+                <button class="btn btn-action">📷</button>
+            </div>
+        </div>
+
+        <div class="sidebar" style="border-left: none; border-right: 1px solid rgba(255, 255, 255, 0.1);">
+            <h3>وضعیت آنلاین</h3>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="width: 10px; height: 10px; background: #2ed573; border-radius: 50%;"></div>
+                <span>نامزد من (آنلاین)</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
